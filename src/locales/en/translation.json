@@ -1,0 +1,10 @@
+{
+  "common": {
+    "dashboard": "Dashboard",
+    "clientError": "Client Error"
+  },
+  "error404": {
+    "comeBack": "Return to Home",
+    "notFound": "Sorry, page not found!"
+  }
+}
