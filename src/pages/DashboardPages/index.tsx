@@ -1,15 +1,18 @@
-import { Typography } from 'antd'
+import { Typography, Modal, Button } from 'antd'
+import { useState } from 'react'
 
 const { Title } = Typography
 
 export default function DashboardPages() {
+  const [open, setOpen] = useState(false)
+
   return (
     <>
       <Title>h1. Ant Design</Title>
-      <Title level={2}>h2. Ant Design</Title>
-      <Title level={3}>h3. Ant Design</Title>
-      <Title level={4}>h4. Ant Design</Title>
-      <Title level={5}>h5. Ant Design</Title>
+      <Button type='primary' onClick={() => setOpen(true)}>
+        Modal
+      </Button>
+      <Modal title='Add city' open={open} onOk={() => setOpen(false)} onCancel={() => setOpen(false)} />
     </>
   )
 }

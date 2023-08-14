@@ -5,7 +5,7 @@ import { ProfileDropdown } from '../components/profileDropdown/profileDropdown'
 export const DesktopHeader: React.FC = () => {
   return (
     <Row justify='space-between' align='middle'>
-      hello
+      <div className='text-2xl'>hello</div>
       <Col xl={8} xxl={7}>
         <Row align='middle' justify='end' gutter={[5, 5]}>
           <Col></Col>
