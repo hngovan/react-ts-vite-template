@@ -1,7 +1,7 @@
 import React from 'react'
 import RequireAuth from '@/components/router/RequireAuth'
-import { AdminLayout } from '@/components/layouts'
-import { useRoutes } from 'react-router-dom'
+import { AdminLayout } from '@/components/layouts/AdminLayout/MainLayout/MainLayout'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 // no lazy loading for auth pages to avoid flickering
 import Login from '@/pages/Login'
@@ -22,16 +22,18 @@ export const AppRouter: React.FC = () => {
     </RequireAuth>
   )
 
-  console.log(protectedLayout)
-
-  const router = useRoutes([
+  const router = createBrowserRouter([
     {
       path: '/',
-      element: <AdminLayout />,
+      element: protectedLayout,
       children: [
         {
           index: true,
           element: <Dashboard />
+        },
+        {
+          path: '*',
+          element: <Error404 />
         }
       ]
     },
@@ -47,12 +49,8 @@ export const AppRouter: React.FC = () => {
     {
       path: 'logout',
       element: <LogoutFallback />
-    },
-    {
-      path: '/*',
-      element: <Error404 />
     }
   ])
 
-  return router
+  return <RouterProvider router={router} />
 }

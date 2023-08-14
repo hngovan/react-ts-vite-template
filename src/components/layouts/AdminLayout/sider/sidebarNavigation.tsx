@@ -15,5 +15,11 @@ export const sidebarNavigation: SidebarNavigationItem[] = [
     key: 'dashboard',
     url: '/',
     icon: <DashboardOutlined />
+  },
+  {
+    title: 'common.dashboard',
+    key: 'test',
+    url: '/hello',
+    icon: <DashboardOutlined />
   }
 ]

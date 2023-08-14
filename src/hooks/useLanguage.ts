@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { Dates } from '@/constants/dates'
 import { LanguageType } from '@/interfaces/interfaces'
 import { useCallback, useEffect, useMemo } from 'react'

@@ -16,7 +16,7 @@ export const persistAdmin = (user: UserModel): void => {
 export const readUser = (): UserModel | null => {
   const userStr = localStorage.getItem('user')
 
-  return userStr ? JSON.parse(userStr) : {}
+  return userStr ? JSON.parse(userStr) : { firstName: 'Chris', lastName: 'Johnson' }
 }
 
 export const deleteToken = (): void => localStorage.removeItem(ADMIN_ACCESS_TOKEN)
