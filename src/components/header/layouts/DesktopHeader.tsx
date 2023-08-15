@@ -1,19 +1,23 @@
-import { Row, Col } from 'antd'
 import React from 'react'
-import { ProfileDropdown } from '../components/profileDropdown/profileDropdown'
+import { SettingsDropdown } from '../components/settingsDropdown/SettingsDropdown'
+import { ProfileDropdown } from '../components/profileDropdown/ProfileDropdown/ProfileDropdown'
+import { BaseCol } from '@/components/common/BaseCol/BaseCol'
+import { BaseRow } from '@/components/common/BaseRow/BaseRow'
 
 export const DesktopHeader: React.FC = () => {
   return (
-    <Row justify='space-between' align='middle'>
-      <div className='text-2xl'>hello</div>
-      <Col xl={8} xxl={7}>
-        <Row align='middle' justify='end' gutter={[5, 5]}>
-          <Col></Col>
-          <Col>
+    <BaseRow justify='space-between' align='middle'>
+      <div></div>
+      <BaseCol xl={8} xxl={7}>
+        <BaseRow align='middle' justify='end' gutter={[5, 5]}>
+          <BaseCol>
+            <SettingsDropdown />
+          </BaseCol>
+          <BaseCol>
             <ProfileDropdown />
-          </Col>
-        </Row>
-      </Col>
-    </Row>
+          </BaseCol>
+        </BaseRow>
+      </BaseCol>
+    </BaseRow>
   )
 }

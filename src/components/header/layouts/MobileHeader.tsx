@@ -1,18 +1,32 @@
-import { Row, Col } from 'antd'
-import React from 'react'
-import { ProfileDropdown } from '../components/profileDropdown/profileDropdown'
+import { ProfileDropdown } from '../components/profileDropdown/ProfileDropdown/ProfileDropdown'
+import { SettingsDropdown } from '../components/settingsDropdown/SettingsDropdown'
+import * as S from '../Header.styles'
+import { BaseCol } from '@/components/common/BaseCol/BaseCol'
+import { BaseRow } from '@/components/common/BaseRow/BaseRow'
 
-export const MobileHeader: React.FC = () => {
+interface MobileHeaderProps {
+  toggleSider: () => void
+  isSiderOpened: boolean
+}
+
+export const MobileHeader: React.FC<MobileHeaderProps> = ({ toggleSider, isSiderOpened }) => {
   return (
-    <Row justify='space-between' align='middle'>
-      <Col xl={8} xxl={7}>
-        <Row align='middle' justify='end' gutter={[5, 5]}>
-          <Col></Col>
-          <Col>
-            <ProfileDropdown />
-          </Col>
-        </Row>
-      </Col>
-    </Row>
+    <BaseRow justify='space-between' align='middle'>
+      <BaseCol>
+        <ProfileDropdown />
+      </BaseCol>
+
+      <BaseCol>
+        <BaseRow align='middle'>
+          <BaseCol>
+            <SettingsDropdown />
+          </BaseCol>
+        </BaseRow>
+      </BaseCol>
+
+      <S.BurgerCol>
+        <S.MobileBurger onClick={toggleSider} isCross={isSiderOpened} />
+      </S.BurgerCol>
+    </BaseRow>
   )
 }

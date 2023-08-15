@@ -7,10 +7,10 @@ export const LayoutMaster = styled(BaseLayout)`
 `
 
 export const LayoutMain = styled(BaseLayout)`
+  background: var(--layout-body-bg-color);
+
   ${`@media only screen and ${media.md}`} {
-    margin-left: unset;
-    /* background: var(--layout-body-bg-color); */
-    /* margin-left: 80px; */
+    margin-left: 80px;
   }
 
   ${`@media only screen and ${media.xl}`} {

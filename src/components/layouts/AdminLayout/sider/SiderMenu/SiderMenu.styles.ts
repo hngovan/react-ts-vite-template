@@ -13,7 +13,7 @@ export const Menu = styled(BaseMenu)`
 
   .ant-menu-item,
   .ant-menu-submenu {
-    font-size: ${FONT_SIZE.xs};
+    font-size: ${FONT_SIZE.md};
   }
 
   .ant-menu-item-icon {

@@ -1,7 +1,16 @@
 {
   "common": {
     "dashboard": "Dashboard",
-    "clientError": "Client Error"
+    "clientError": "Client Error",
+    "profilePage": "Profile Page"
+  },
+  "profile": {
+    "title": "Profile"
+  },
+  "header": {
+    "changeLanguage": "Change language",
+    "changeTheme": "Change theme",
+    "logout": "Logout"
   },
   "error404": {
     "comeBack": "Return to Home",

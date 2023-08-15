@@ -5,12 +5,12 @@ import { useResponsive } from '@/hooks/useResponsive'
 import logo from '/vite.svg'
 import logoDark from '@/assets/react.svg'
 import { useAppSelector } from '@/hooks/reduxHooks'
-import { Button } from 'antd'
 
 interface SiderLogoProps {
   isSiderCollapsed: boolean
   toggleSider: () => void
 }
+
 export const SiderLogo: React.FC<SiderLogoProps> = ({ isSiderCollapsed, toggleSider }) => {
   const { tabletOnly } = useResponsive()
 
@@ -25,10 +25,10 @@ export const SiderLogo: React.FC<SiderLogoProps> = ({ isSiderCollapsed, toggleSi
         <S.BrandSpan>vite+react</S.BrandSpan>
       </S.SiderLogoLink>
       {tabletOnly && (
-        <Button
+        <S.CollapseButton
           shape='circle'
-          size='small'
-          // $isCollapsed={isSiderCollapsed}
+          size='middle'
+          $isCollapsed={isSiderCollapsed}
           icon={<RightOutlined rotate={isSiderCollapsed ? 0 : 180} />}
           onClick={toggleSider}
         />

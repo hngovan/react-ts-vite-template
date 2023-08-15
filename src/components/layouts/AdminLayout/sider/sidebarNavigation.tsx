@@ -1,5 +1,5 @@
 import React from 'react'
-import { DashboardOutlined } from '@ant-design/icons'
+import { DashboardOutlined, UserOutlined } from '@ant-design/icons'
 
 export interface SidebarNavigationItem {
   title: string
@@ -17,9 +17,9 @@ export const sidebarNavigation: SidebarNavigationItem[] = [
     icon: <DashboardOutlined />
   },
   {
-    title: 'common.dashboard',
-    key: 'test',
-    url: '/hello',
-    icon: <DashboardOutlined />
+    title: 'common.profilePage',
+    key: 'profile',
+    url: '/profile',
+    icon: <UserOutlined />
   }
 ]
