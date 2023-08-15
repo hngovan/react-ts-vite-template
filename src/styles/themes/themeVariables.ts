@@ -16,7 +16,6 @@ export const antThemeObject = {
 }
 
 const getThemeVariables = (theme: ThemeType) => css`
-  color-scheme: ${theme};
   --primary-color: ${themeObject[theme].primary};
   --primary1-color: ${themeObject[theme].primary1};
   --primary-gradient-color: ${themeObject[theme].primaryGradient};
@@ -98,7 +97,6 @@ export const darkThemeVariables = css`
 `
 
 export const commonThemeVariables = css`
-  /* color-scheme: light dark; */
   --white: ${BASE_COLORS.white};
   --black: ${BASE_COLORS.black};
   --green: ${BASE_COLORS.green};

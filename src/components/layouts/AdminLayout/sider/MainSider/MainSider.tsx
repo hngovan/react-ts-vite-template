@@ -29,7 +29,7 @@ export const MainSider: React.FC<MainSiderProps> = ({ isCollapsed, setCollapsed,
       >
         <SiderLogo isSiderCollapsed={isCollapsed} toggleSider={toggleSider} />
         <S.SiderContent>
-          <SiderMenu setCollapsed={setCollapsed} />
+          <SiderMenu theme={'dark'} setCollapsed={setCollapsed} />
         </S.SiderContent>
       </S.Sider>
       {/* {mobileOnly && <Overlay onClick={toggleSider} show={!isCollapsed} />} */}

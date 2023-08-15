@@ -1,17 +1,46 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 import { LAYOUT, media } from '@/styles/themes/constants'
 import { BaseLayout } from '@/components/common/BaseLayout/BaseLayout'
+import { BaseButton } from '@/components/common/BaseButton/BaseButton'
+
+export const CollapseButton = styled(BaseButton)<{ $isCollapsed: boolean }>`
+  background: var(--collapse-background-color);
+
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+  position: absolute;
+  right: 0.5rem;
+
+  ${props =>
+    props.$isCollapsed &&
+    css`
+      right: -1rem;
+    `}
+
+  color: var(--text-secondary-color);
+
+  &:hover {
+    color: var(--text-secondary-color);
+    background: var(--primary-color);
+    border: 1px solid var(--border-color);
+  }
+
+  &:focus {
+    color: var(--text-secondary-color);
+    background: var(--primary-color);
+    border: 1px solid var(--border-color);
+  }
+`
 
 export const Sider = styled(BaseLayout.Sider)`
-  position: fixed;
+  position: fixed !important;
   overflow: visible;
   right: 0;
   z-index: 5;
   min-height: 100vh;
   max-height: 100vh;
-
-  color: var(--text-secondary-color);
+  background: var(--layout-sider-bg-color) !important;
 
   ${`@media only screen and ${media.md}`} {
     right: unset;
@@ -19,7 +48,7 @@ export const Sider = styled(BaseLayout.Sider)`
   }
 
   ${`@media only screen and ${media.xl}`} {
-    position: unset;
+    position: unset !important;
   }
 `
 

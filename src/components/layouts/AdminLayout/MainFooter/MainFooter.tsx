@@ -1,6 +1,5 @@
-import { Layout } from 'antd'
-const { Footer } = Layout
+import * as S from './MainFooter.styles'
 
 export const MainFooter: React.FC = () => {
-  return <Footer className='text-center text-zinc-500'>Based on Ant-design</Footer>
+  return <S.FooterWrapper>Ant Design ©2023 Created by Ant UED</S.FooterWrapper>
 }

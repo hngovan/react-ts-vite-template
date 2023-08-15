@@ -4,24 +4,27 @@ import { MainSider } from '../sider/MainSider/MainSider'
 import { MainHeader } from '../MainHeader/MainHeader'
 import { MainFooter } from '../MainFooter/MainFooter'
 import { Header } from '@/components/header/Header'
-import MainContent from '../MainContent/MainContent'
 import * as S from './MainLayout.styles'
+import MainContent from '../MainContent/MainContent'
 
 export const AdminLayout: React.FC = () => {
   const [siderCollapsed, setSiderCollapsed] = useState(true)
-  // const toggleSider = () => setSiderCollapsed(!siderCollapsed)
+
+  const toggleSider = () => setSiderCollapsed(!siderCollapsed)
 
   return (
     <S.LayoutMaster>
       <MainSider isCollapsed={siderCollapsed} setCollapsed={setSiderCollapsed} />
       <S.LayoutMain>
         <MainHeader>
-          <Header />
+          <Header toggleSider={toggleSider} isSiderOpened={!siderCollapsed} />
         </MainHeader>
         <MainContent id='main-content'>
-          <Outlet />
+          <div>
+            <Outlet />
+          </div>
+          <MainFooter />
         </MainContent>
-        <MainFooter />
       </S.LayoutMain>
     </S.LayoutMaster>
   )

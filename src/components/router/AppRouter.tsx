@@ -9,10 +9,12 @@ import { withLoading } from '@/hocs/withLoading.hoc'
 
 const DashboardPages = React.lazy(() => import('@/pages/DashboardPages'))
 const Error404Page = React.lazy(() => import('@/pages/Error404Page'))
+const ProfilePage = React.lazy(() => import('@/pages/Profile/Profile'))
 const Logout = React.lazy(() => import('./Logout'))
 
 const Dashboard = withLoading(DashboardPages)
 const Error404 = withLoading(Error404Page)
+const Profile = withLoading(ProfilePage)
 const LogoutFallback = withLoading(Logout)
 
 export const AppRouter: React.FC = () => {
@@ -30,6 +32,10 @@ export const AppRouter: React.FC = () => {
         {
           index: true,
           element: <Dashboard />
+        },
+        {
+          path: 'profile',
+          element: <Profile />
         },
         {
           path: '*',

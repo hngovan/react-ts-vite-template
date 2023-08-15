@@ -2,9 +2,11 @@ import React from 'react'
 import { sidebarNavigation, SidebarNavigationItem } from '../sidebarNavigation'
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router-dom'
+import { ThemeType } from '@/interfaces/interfaces'
 import * as S from './SiderMenu.styles'
 
 interface SiderContentProps {
+  theme: ThemeType
   setCollapsed: (isCollapsed: boolean) => void
 }
 
@@ -14,7 +16,7 @@ const sidebarNavFlat = sidebarNavigation.reduce(
   []
 )
 
-export const SiderMenu: React.FC<SiderContentProps> = ({ setCollapsed }) => {
+export const SiderMenu: React.FC<SiderContentProps> = ({ setCollapsed, theme }) => {
   const { t } = useTranslation()
 
   const location = useLocation()
@@ -25,8 +27,10 @@ export const SiderMenu: React.FC<SiderContentProps> = ({ setCollapsed }) => {
   const openedSubmenu = sidebarNavigation.find(({ children }) => children?.some(({ url }) => url === location.pathname))
 
   const defaultOpenKeys = openedSubmenu ? [openedSubmenu.key] : []
+
   return (
     <S.Menu
+      theme={theme}
       mode='inline'
       defaultSelectedKeys={defaultSelectedKeys}
       defaultOpenKeys={defaultOpenKeys}

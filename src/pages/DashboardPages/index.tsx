@@ -1,18 +1,16 @@
-import { Typography, Modal, Button } from 'antd'
-import { useState } from 'react'
+import { PageTitle } from '@/components/common/PageTitle/PageTitle'
+import { Typography } from 'antd'
+import { useTranslation } from 'react-i18next'
 
 const { Title } = Typography
 
 export default function DashboardPages() {
-  const [open, setOpen] = useState(false)
+  const { t } = useTranslation()
 
   return (
     <>
-      <Title>h1. Ant Design</Title>
-      <Button type='primary' onClick={() => setOpen(true)}>
-        Modal
-      </Button>
-      <Modal title='Add city' open={open} onOk={() => setOpen(false)} onCancel={() => setOpen(false)} />
+      <PageTitle>{t('common.dashboard')}</PageTitle>
+      <Title>{t('common.dashboard')}</Title>
     </>
   )
 }
