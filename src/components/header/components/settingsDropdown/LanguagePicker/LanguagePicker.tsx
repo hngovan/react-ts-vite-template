@@ -1,22 +1,21 @@
 import React from 'react'
 import { useLanguage } from '@/hooks/useLanguage'
 import { RadioBtn } from '../SettingsOverlay/SettingsOverlay.styles'
-import { BaseRadio } from '@/components/common/BaseRadio/BaseRadio'
-import { BaseSpace } from '@/components/common/BaseSpace/BaseSpace'
+import { Space, Radio } from 'antd'
 
 export const LanguagePicker: React.FC = () => {
   const { language, setLanguage } = useLanguage()
 
   return (
-    <BaseRadio.Group defaultValue={language} onChange={e => setLanguage(e.target.value)}>
-      <BaseSpace direction='vertical'>
+    <Radio.Group defaultValue={language} onChange={e => setLanguage(e.target.value)}>
+      <Space direction='vertical'>
         <RadioBtn value='en'>
-          <BaseSpace align='center'>English</BaseSpace>
+          <Space align='center'>English</Space>
         </RadioBtn>
         <RadioBtn value='jp'>
-          <BaseSpace align='center'>Japan</BaseSpace>
+          <Space align='center'>Japan</Space>
         </RadioBtn>
-      </BaseSpace>
-    </BaseRadio.Group>
+      </Space>
+    </Radio.Group>
   )
 }

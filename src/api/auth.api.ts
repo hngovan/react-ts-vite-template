@@ -1,14 +1,15 @@
 import httpApi from '@/utils/http.api'
-import { UserModel } from '@/models/UserModel'
+import { AdminModel } from '@/models/AdminModel'
 
 export interface LoginRequest {
   email: string
   password: string
+  remember: boolean
 }
 
 export interface LoginResponse {
   token: string
-  user: UserModel
+  user: AdminModel
 }
 
 export interface SignUpRequest {

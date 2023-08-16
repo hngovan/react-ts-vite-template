@@ -29,7 +29,7 @@ export const SiderMenu: React.FC<SiderContentProps> = ({ setCollapsed, theme }) 
   const defaultOpenKeys = openedSubmenu ? [openedSubmenu.key] : []
 
   return (
-    <S.Menu
+    <S.MainMenu
       theme={theme}
       mode='inline'
       defaultSelectedKeys={defaultSelectedKeys}

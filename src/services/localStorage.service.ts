@@ -1,5 +1,5 @@
 import { ADMIN_ACCESS_TOKEN, ADMIN_INFO } from '@/constants/authentication'
-import { UserModel } from '@/models/UserModel'
+import { UserModel } from '@/models/AdminModel'
 
 export const persistToken = (token: string): void => {
   localStorage.setItem(ADMIN_ACCESS_TOKEN, token)

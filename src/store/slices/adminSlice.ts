@@ -1,16 +1,16 @@
 import { createAction, createSlice, PrepareAction } from '@reduxjs/toolkit'
-import { UserModel } from '@/models/UserModel'
+import { AdminModel } from '@/models/AdminModel'
 import { persistAdmin, readUser } from '@/services/localStorage.service'
 
 export interface UserState {
-  user: UserModel | null
+  admin: AdminModel | null
 }
 
 const initialState: UserState = {
-  user: readUser()
+  admin: readUser()
 }
 
-export const setAdmin = createAction<PrepareAction<UserModel>>('user/setUser', newAdmin => {
+export const setAdmin = createAction<PrepareAction<AdminModel>>('admin/setAmin', newAdmin => {
   persistAdmin(newAdmin)
 
   return {
@@ -24,7 +24,7 @@ export const adminSlice = createSlice({
   reducers: {},
   extraReducers: builder => {
     builder.addCase(setAdmin, (state, action) => {
-      state.user = action.payload
+      state.admin = action.payload
     })
   }
 })

@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import { media } from '@/styles/themes/constants'
-import { BaseLayout } from '@/components/common/BaseLayout/BaseLayout'
+import { Layout } from 'antd'
 
-export const LayoutMaster = styled(BaseLayout)`
+export const LayoutMaster = styled(Layout)`
   height: 100vh;
 `
 
-export const LayoutMain = styled(BaseLayout)`
+export const LayoutMain = styled(Layout)`
   background: var(--layout-body-bg-color);
 
   ${`@media only screen and ${media.md}`} {

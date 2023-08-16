@@ -2,10 +2,7 @@ import { ProfileOverlay } from '../ProfileOverlay/ProfileOverlay'
 import { useAppSelector } from '@/hooks/reduxHooks'
 import { useResponsive } from '@/hooks/useResponsive'
 import * as S from './ProfileDropdown.styles'
-import { BaseAvatar } from '@/components/common/BaseAvatar/BaseAvatar'
-import { BasePopover } from '@/components/common/BasePopover/BasePopover'
-import { BaseCol } from '@/components/common/BaseCol/BaseCol'
-import { BaseRow } from '@/components/common/BaseRow/BaseRow'
+import { Row, Col, Avatar, Popover } from 'antd'
 
 export const ProfileDropdown: React.FC = () => {
   const { isTablet } = useResponsive()
@@ -13,17 +10,17 @@ export const ProfileDropdown: React.FC = () => {
   const user = useAppSelector(state => state.user.user)
 
   return user ? (
-    <BasePopover content={<ProfileOverlay />} trigger='click'>
-      <S.ProfileDropdownHeader as={BaseRow} gutter={[10, 10]} align='middle'>
-        <BaseCol>
-          <BaseAvatar src={user.imgUrl} alt='User' shape='circle' size={40} />
-        </BaseCol>
+    <Popover content={<ProfileOverlay />} trigger='click'>
+      <S.ProfileDropdownHeader as={Row} gutter={[10, 10]} align='middle'>
+        <Col>
+          <Avatar src={user.imgUrl} alt='Admin' shape='circle' size={40} />
+        </Col>
         {isTablet && (
-          <BaseCol>
-            <span>{`${user.firstName} ${user.lastName[0]}`}</span>
-          </BaseCol>
+          <Col>
+            <span>{`${user.firstName} ${user.lastName}`}</span>
+          </Col>
         )}
       </S.ProfileDropdownHeader>
-    </BasePopover>
+    </Popover>
   ) : null
 }
