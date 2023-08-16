@@ -1,8 +1,7 @@
-import { LAYOUT, media } from '@/styles/themes/constants'
+import { media } from '@/styles/themes/constants'
 import styled, { css } from 'styled-components'
-import { BaseCollapse } from '../common/BaseCollapse/BaseCollapse'
 import { BurgerIcon } from '../common/icons/BurgerIcon'
-import { BaseCol } from '../common/BaseCol/BaseCol'
+import { Col, Collapse } from 'antd'
 
 export const HeaderActionWrapper = styled.div`
   cursor: pointer;
@@ -21,7 +20,7 @@ export const HeaderActionWrapper = styled.div`
   }
 `
 
-export const DropdownCollapse = styled(BaseCollapse)`
+export const DropdownCollapse = styled(Collapse)`
   & > .ant-collapse-item > .ant-collapse-header {
     font-weight: 600;
     font-size: 0.875rem;
@@ -42,7 +41,7 @@ export const DropdownCollapse = styled(BaseCollapse)`
   }
 `
 
-export const BurgerCol = styled(BaseCol)`
+export const BurgerCol = styled(Col)`
   z-index: 999;
   display: flex;
 `
@@ -58,8 +57,4 @@ export const MobileBurger = styled(BurgerIcon)`
     css`
       color: var(--text-secondary-color);
     `};
-`
-
-export const SearchColumn = styled(BaseCol)`
-  padding: ${LAYOUT.desktop.paddingVertical} ${LAYOUT.desktop.paddingHorizontal};
 `

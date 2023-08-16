@@ -1,8 +1,7 @@
 import { ProfileDropdown } from '../components/profileDropdown/ProfileDropdown/ProfileDropdown'
 import { SettingsDropdown } from '../components/settingsDropdown/SettingsDropdown'
 import * as S from '../Header.styles'
-import { BaseCol } from '@/components/common/BaseCol/BaseCol'
-import { BaseRow } from '@/components/common/BaseRow/BaseRow'
+import { Row, Col } from 'antd'
 
 interface MobileHeaderProps {
   toggleSider: () => void
@@ -11,22 +10,22 @@ interface MobileHeaderProps {
 
 export const MobileHeader: React.FC<MobileHeaderProps> = ({ toggleSider, isSiderOpened }) => {
   return (
-    <BaseRow justify='space-between' align='middle'>
-      <BaseCol>
+    <Row justify='space-between' align='middle'>
+      <Col>
         <ProfileDropdown />
-      </BaseCol>
+      </Col>
 
-      <BaseCol>
-        <BaseRow align='middle'>
-          <BaseCol>
+      <Col>
+        <Row align='middle'>
+          <Col>
             <SettingsDropdown />
-          </BaseCol>
-        </BaseRow>
-      </BaseCol>
+          </Col>
+        </Row>
+      </Col>
 
       <S.BurgerCol>
         <S.MobileBurger onClick={toggleSider} isCross={isSiderOpened} />
       </S.BurgerCol>
-    </BaseRow>
+    </Row>
   )
 }

@@ -1,12 +1,12 @@
 import { BORDER_RADIUS } from '@/styles/themes/constants'
-import { BaseButton } from '@/components/common/BaseButton/BaseButton'
+import { Button } from 'antd'
 import styled, { css } from 'styled-components'
 
 interface BtnProps {
   $isFirstActive: boolean
 }
 
-export const Btn = styled(BaseButton)`
+export const Btn = styled(Button)`
   display: flex;
   align-items: center;
   justify-content: center;

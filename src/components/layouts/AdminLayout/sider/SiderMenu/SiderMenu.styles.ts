@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import { FONT_SIZE } from '@/styles/themes/constants'
-import { BaseMenu } from '@/components/common/BaseMenu/BaseMenu'
+import { Menu } from 'antd'
 
-export const Menu = styled(BaseMenu)`
+export const MainMenu = styled(Menu)`
   background: transparent;
   border-right: 0;
 

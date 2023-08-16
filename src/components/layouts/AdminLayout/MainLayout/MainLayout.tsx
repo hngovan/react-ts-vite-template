@@ -20,9 +20,7 @@ export const AdminLayout: React.FC = () => {
           <Header toggleSider={toggleSider} isSiderOpened={!siderCollapsed} />
         </MainHeader>
         <MainContent id='main-content'>
-          <div>
-            <Outlet />
-          </div>
+          <Outlet />
           <MainFooter />
         </MainContent>
       </S.LayoutMain>

@@ -1,8 +1,17 @@
 {
   "common": {
-    "dashboard": "Dashboard",
     "clientError": "Client Error",
-    "profilePage": "Profile Page"
+    "dashboard": "Dashboard",
+    "profilePage": "Profile Page",
+    "password": "Password",
+    "login": "Log In",
+    "email": "Email",
+    "emailError": "Please input users name or delete this field",
+    "notValidEmail": "Please input a valid email address!",
+    "forgotPass": "Forgot Password",
+    "requiredField": "This field is required!",
+    "resetPassword": "Reset password",
+    "here": "here"
   },
   "profile": {
     "title": "Profile"
@@ -15,5 +24,10 @@
   "error404": {
     "comeBack": "Return to Home",
     "notFound": "Sorry, page not found!"
+  },
+  "login": {
+    "noAccount": "Don’t have an account? Create one",
+    "rememberMe": "Remember me",
+    "signupLink": "here"
   }
 }

@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 import { media } from '@/styles/themes/constants'
-import { BaseTypography } from '@/components/common/BaseTypography/BaseTypography'
-import { BaseDivider } from '@/components/common/BaseDivider/BaseDivider'
+import { Typography, Divider } from 'antd'
 
-export const Text = styled(BaseTypography.Text)`
+export const Text = styled(Typography.Text)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,6 +19,6 @@ export const Text = styled(BaseTypography.Text)`
   }
 `
 
-export const ItemsDivider = styled(BaseDivider)`
+export const ItemsDivider = styled(Divider)`
   margin: 0;
 `

@@ -1,7 +1,7 @@
-import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { PageTitle } from '@/components/common/PageTitle/PageTitle'
-import { Button, Result } from 'antd'
+import { Result } from 'antd'
+import { Link } from 'react-router-dom'
 
 const Error404Page: React.FC = () => {
   const { t } = useTranslation()
@@ -14,9 +14,9 @@ const Error404Page: React.FC = () => {
         title='404'
         subTitle={t('error404.notFound')}
         extra={
-          <Button type='primary' onClick={() => (window.location.href = '/')}>
-            Back Home
-          </Button>
+          <Link to='/' className='ant-btn ant-btn-link'>
+            {t('error404.comeBack')}
+          </Link>
         }
       />
     </>

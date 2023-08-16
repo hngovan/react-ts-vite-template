@@ -1,9 +1,9 @@
 import { useMemo } from 'react'
-// import { Overlay } from 'antd/es/popconfirm/PurePanel'
 import { useResponsive } from '@/hooks/useResponsive'
+import { Overlay } from '@/components/common/Overlay/Overlay'
 import { SiderMenu } from '../SiderMenu/SiderMenu'
-import * as S from './MainSider.styles'
 import { SiderLogo } from '../SiderLogo'
+import * as S from './MainSider.styles'
 
 interface MainSiderProps {
   isCollapsed: boolean
@@ -32,7 +32,7 @@ export const MainSider: React.FC<MainSiderProps> = ({ isCollapsed, setCollapsed,
           <SiderMenu theme={'dark'} setCollapsed={setCollapsed} />
         </S.SiderContent>
       </S.Sider>
-      {/* {mobileOnly && <Overlay onClick={toggleSider} show={!isCollapsed} />} */}
+      {mobileOnly && <Overlay onClick={toggleSider} show={!isCollapsed} />}
     </>
   )
 }

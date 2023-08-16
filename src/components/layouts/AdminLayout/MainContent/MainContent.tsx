@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import { LAYOUT, media } from '@/styles/themes/constants'
-import { BaseLayout } from '@/components/common/BaseLayout/BaseLayout'
+import { Layout } from 'antd'
 
-export default styled(BaseLayout.Content)`
+export default styled(Layout.Content)`
   padding: ${LAYOUT.mobile.paddingVertical} ${LAYOUT.mobile.paddingHorizontal};
   overflow: auto;
   display: flex;

@@ -1,4 +1,4 @@
-export interface UserModel {
+export interface AdminModel {
   id: number
   firstName: string
   lastName: string
