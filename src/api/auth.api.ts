@@ -9,7 +9,7 @@ export interface LoginRequest {
 
 export interface LoginResponse {
   token: string
-  user: AdminModel
+  admin: AdminModel
 }
 
 export interface SignUpRequest {
@@ -19,8 +19,8 @@ export interface SignUpRequest {
   password: string
 }
 
-export interface SecurityCodePayload {
-  code: string
+export interface ResetPasswordRequest {
+  email: string
 }
 
 export const login = (loginPayload: LoginRequest): Promise<LoginResponse> =>
@@ -29,5 +29,5 @@ export const login = (loginPayload: LoginRequest): Promise<LoginResponse> =>
 export const signUp = (signUpData: SignUpRequest): Promise<undefined> =>
   httpApi.post<undefined>('signUp', { ...signUpData }).then(({ data }) => data)
 
-export const verifySecurityCode = (securityCodePayload: SecurityCodePayload): Promise<undefined> =>
-  httpApi.post<undefined>('verifySecurityCode', { ...securityCodePayload }).then(({ data }) => data)
+export const resetPassword = (resetPasswordPayload: ResetPasswordRequest): Promise<undefined> =>
+  httpApi.post<undefined>('forgotPassword', { ...resetPasswordPayload }).then(({ data }) => data)

@@ -1,11 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import { BREAKPOINTS, FONT_SIZE, FONT_WEIGHT, media } from './themes/constants'
-import {
-  antOverrideCssVariables,
-  commonThemeVariables,
-  darkThemeVariables,
-  lightThemeVariables
-} from './themes/themeVariables'
+import { commonThemeVariables, darkThemeVariables, lightThemeVariables } from './themes/themeVariables'
 
 export default createGlobalStyle`
   [data-theme='light'],
@@ -19,7 +14,6 @@ export default createGlobalStyle`
 
   :root {
     ${commonThemeVariables};
-    ${antOverrideCssVariables};
   }
 
   [data-no-transition] * {
@@ -188,5 +182,12 @@ export default createGlobalStyle`
 
   .ant-menu-inline, .ant-menu-vertical {
     border-right: 0;
+  }
+
+  .ant-menu-light.ant-menu-root.ant-menu-inline,
+  .ant-menu-light>.ant-menu.ant-menu-root.ant-menu-inline,
+  .ant-menu-light.ant-menu-root.ant-menu-vertical,
+  .ant-menu-light>.ant-menu.ant-menu-root.ant-menu-vertical {
+    border-inline-end: 0;
   }
 `

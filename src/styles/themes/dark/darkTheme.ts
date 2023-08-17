@@ -60,8 +60,3 @@ export const darkColorsTheme: ITheme = {
   icon: '#a9a9a9',
   iconHover: '#ffffff'
 }
-
-export const antDarkColorsTheme = {
-  successBg: '#e6fff2',
-  successBorder: '#79fcc4'
-}

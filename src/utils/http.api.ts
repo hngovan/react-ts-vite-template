@@ -23,7 +23,7 @@ httpApi.interceptors.request.use(
 
 httpApi.interceptors.response.use(
   (response: AxiosResponse) => {
-    return response.data
+    return response
   },
   (error: AxiosError) => {
     const { response, request } = error
