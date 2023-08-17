@@ -3,7 +3,7 @@ import adminReducer from '@/store/slices/adminSlice'
 import themeReducer from '@/store/slices/themeSlice'
 
 export default {
-  user: adminReducer,
+  admin: adminReducer,
   auth: authReducer,
   theme: themeReducer
 }

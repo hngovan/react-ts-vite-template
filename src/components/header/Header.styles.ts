@@ -25,7 +25,7 @@ export const DropdownCollapse = styled(Collapse)`
     font-weight: 600;
     font-size: 0.875rem;
 
-    color: var(--primary-color);
+    /* color: var(--primary-color); */
 
     ${`@media only screen and ${media.md}`} {
       font-size: 1rem;
@@ -50,11 +50,11 @@ export const MobileBurger = styled(BurgerIcon)`
   width: 1.75rem;
   height: 1.75rem;
   margin-right: -0.5rem;
-  color: var(--text-main-color);
+  /* color: var(--text-main-color); */
 
-  ${props =>
+  /* ${props =>
     props.isCross &&
     css`
       color: var(--text-secondary-color);
-    `};
+    `}; */
 `

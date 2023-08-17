@@ -20,10 +20,4 @@ export interface AdminModel {
   address1: string
   address2?: string
   zipcode: number
-  website?: string
-  socials?: {
-    twitter?: string
-    facebook?: string
-    linkedin?: string
-  }
 }

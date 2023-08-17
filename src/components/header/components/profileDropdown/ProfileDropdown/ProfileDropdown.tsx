@@ -7,7 +7,7 @@ import { Row, Col, Avatar, Popover } from 'antd'
 export const ProfileDropdown: React.FC = () => {
   const { isTablet } = useResponsive()
 
-  const user = useAppSelector(state => state.user.user)
+  const user = useAppSelector(state => state.admin.admin)
 
   return user ? (
     <Popover content={<ProfileOverlay />} trigger='click'>
