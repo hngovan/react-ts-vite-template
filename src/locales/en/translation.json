@@ -3,6 +3,7 @@
     "clientError": "Client Error",
     "dashboard": "Dashboard",
     "profilePage": "Profile Page",
+    "productPage": "Product",
     "password": "Password",
     "login": "Log In",
     "email": "Email",
@@ -29,5 +30,10 @@
     "noAccount": "Don’t have an account? Create one",
     "rememberMe": "Remember me",
     "signupLink": "here"
+  },
+  "tables": {
+    "invite": "Invite",
+    "delete": "Delete",
+    "inviteMessage": "{{name}} invited successfully"
   }
 }

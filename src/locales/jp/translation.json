@@ -16,5 +16,10 @@
   "error404": {
     "comeBack": "ホームに戻る",
     "notFound": "申し訳ありませんが、ページが見つかりませんでした！"
+  },
+  "login": {
+    "noAccount": "Don’t have an account? Create one",
+    "rememberMe": "Remember me",
+    "signupLink": "here"
   }
 }

@@ -2,7 +2,7 @@ import { PageTitle } from '@/components/common/PageTitle/PageTitle'
 import { Card, Button, Row, Col, Space } from 'antd'
 import { useTranslation } from 'react-i18next'
 
-const AlertsPage: React.FC = () => {
+const ProfilePage: React.FC = () => {
   const { t } = useTranslation()
 
   return (
@@ -75,4 +75,4 @@ const AlertsPage: React.FC = () => {
   )
 }
 
-export default AlertsPage
+export default ProfilePage

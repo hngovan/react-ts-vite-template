@@ -1,5 +1,4 @@
-import React from 'react'
-import { DashboardOutlined, UserOutlined } from '@ant-design/icons'
+import { DashboardOutlined, FileProtectOutlined, UserOutlined } from '@ant-design/icons'
 
 export interface SidebarNavigationItem {
   title: string
@@ -15,6 +14,12 @@ export const sidebarNavigation: SidebarNavigationItem[] = [
     key: 'dashboard',
     url: '/',
     icon: <DashboardOutlined />
+  },
+  {
+    title: 'common.productPage',
+    key: 'product',
+    url: '/product',
+    icon: <FileProtectOutlined />
   },
   {
     title: 'common.profilePage',

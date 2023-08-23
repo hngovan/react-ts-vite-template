@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 
 const { Title } = Typography
 
-export default function DashboardPages() {
+const DashboardPages: React.FC = () => {
   const { t } = useTranslation()
 
   return (
@@ -14,3 +14,5 @@ export default function DashboardPages() {
     </>
   )
 }
+
+export default DashboardPages
