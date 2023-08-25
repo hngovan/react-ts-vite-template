@@ -4,12 +4,13 @@ import { AdminLayout } from '@/components/layouts/AdminLayout/MainLayout/MainLay
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 // no lazy loading for auth pages to avoid flickering
-import { LoginPage } from '@/pages/LoginPage'
 import { withLoading } from '@/hocs/withLoading.hoc'
+import { LoginPage } from '@/pages/LoginPage'
 
 const AuthLayout = React.lazy(() => import('@/components/layouts/AuthLayout/AuthLayout'))
-const DashboardPages = React.lazy(() => import('@/pages/DashboardPages'))
+const DashboardPages = React.lazy(() => import('@/pages/DashboardPages/DashboardPages'))
 const Error404Page = React.lazy(() => import('@/pages/Error404Page'))
+const ProductPages = React.lazy(() => import('@/pages/ProductPages/ProductPages'))
 const ProfilePage = React.lazy(() => import('@/pages/Profile/Profile'))
 const Logout = React.lazy(() => import('./Logout'))
 
@@ -17,6 +18,7 @@ const Dashboard = withLoading(DashboardPages)
 const Error404 = withLoading(Error404Page)
 const Profile = withLoading(ProfilePage)
 const LogoutFallback = withLoading(Logout)
+const Product = withLoading(ProductPages)
 
 const AuthLayoutFallback = withLoading(AuthLayout)
 
@@ -39,6 +41,10 @@ export const AppRouter: React.FC = () => {
         {
           path: 'profile',
           element: <Profile />
+        },
+        {
+          path: 'product',
+          element: <Product />
         },
         {
           path: '*',

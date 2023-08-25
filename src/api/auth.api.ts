@@ -1,4 +1,4 @@
-import httpApi from '@/utils/http.api'
+import httpApi from '@/utils/http'
 import { AdminModel } from '@/models/AdminModel'
 
 export interface LoginRequest {

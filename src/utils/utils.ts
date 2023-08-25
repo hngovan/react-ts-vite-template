@@ -1,4 +1,20 @@
 import { NotificationType } from '@/components/common/BaseNotification/BaseNotification'
+import { Priority } from '@/constants/enums/priorities'
+
+export const defineColorByPriority = (priority: Priority): string => {
+  switch (priority) {
+    case Priority.INFO:
+      return 'var(--primary-color)'
+    case Priority.LOW:
+      return 'var(--success-color)'
+    case Priority.MEDIUM:
+      return 'var(--warning-color)'
+    case Priority.HIGH:
+      return 'var(--error-color)'
+    default:
+      return 'var(--success-color)'
+  }
+}
 
 export const defineColorBySeverity = (severity: NotificationType | undefined, rgb = false): string => {
   const postfix = rgb ? 'rgb-color' : 'color'

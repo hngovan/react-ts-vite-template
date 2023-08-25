@@ -3,13 +3,13 @@ import { DropdownCollapse } from '@/components/header/Header.styles'
 import { useTranslation } from 'react-i18next'
 import { LanguagePicker } from '../LanguagePicker/LanguagePicker'
 import { ThemePicker } from '../ThemePicker/ThemePicker'
-import { BaseCollapseProps } from '@/components/common/BaseCollapse/BaseCollapse'
+import type { CollapseProps } from 'antd'
 import * as S from './SettingsOverlay.styles'
 
 export const SettingsOverlay: React.FC = ({ ...props }) => {
   const { t } = useTranslation()
 
-  const items: BaseCollapseProps['items'] = [
+  const items: CollapseProps['items'] = [
     {
       key: 'languagePicker',
       label: t('header.changeLanguage'),

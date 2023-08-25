@@ -1,8 +1,8 @@
-import React from 'react'
 import { MoonSunSwitch } from '@/components/common/MoonSunSwitch/MoonSunSwitch'
-import { ThemeType } from '@/interfaces/interfaces'
 import { useAppDispatch, useAppSelector } from '@/hooks/reduxHooks'
+import { ThemeType } from '@/interfaces/interfaces'
 import { setTheme } from '@/store/slices/themeSlice'
+import React from 'react'
 
 export const ThemePicker: React.FC = () => {
   const dispatch = useAppDispatch()
