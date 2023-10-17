@@ -1,9 +1,18 @@
 {
   "common": {
+    "clientError": "クライアント エラー",
     "dashboard": "ダッシュボード",
-    "clientError": "クライアントエラー",
-    "profilePage": "プロフィールページ",
-    "login": "ログイン"
+    "profilePage": "プロフィール ページ",
+    "productPage": "製品",
+    "password": "パスワード",
+    "login": "ログイン",
+    "email": "メール",
+    "emailError": "ユーザー名を入力するか、このフィールドを削除してください",
+    "notValidEmail": "有効な電子メール アドレスを入力してください!",
+    "forgotPass": "パスワードを忘れた場合",
+    "requiredField": "このフィールドは必須です!",
+    "resetPassword": "パスワードをリセット",
+    "here": "ここ"
   },
   "profile": {
     "title": "プロフィール"
@@ -18,8 +27,13 @@
     "notFound": "申し訳ありませんが、ページが見つかりませんでした！"
   },
   "login": {
-    "noAccount": "Don’t have an account? Create one",
-    "rememberMe": "Remember me",
-    "signupLink": "here"
+    "noAccount": "アカウントをお持ちでない場合は、 一つ作る",
+    "rememberMe": "私を覚えてますか",
+    "signupLink": "ここ"
+  },
+  "tables": {
+    "invite": "招待する",
+    "delete": "消去",
+    "inviteMessage": "{{name}} 無事に招待されました"
   }
 }
